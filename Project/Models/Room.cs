@@ -11,7 +11,15 @@ namespace CastleGrimtol.Project.Models
     public Dictionary<string, IRoom> Exits { get; set; }
 
 
-
+    public IRoom GoToRoom(string dir)
+    {
+      if (Exits.ContainsKey(dir))
+      {
+        return Exits[dir];
+      }
+      System.Console.WriteLine("Nothing there");
+      return this;
+    }
 
 
 
