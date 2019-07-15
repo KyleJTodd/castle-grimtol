@@ -236,16 +236,7 @@ Are you sure you wish to start over from the beginning?");
 
     public void TakeItem(string itemName)
     {
-      Item flamethrower = CurrentRoom.Items.Find(i =>
- {
-   return i.Name.ToLower() == itemName;
- });
-      if (flamethrower != null)
-      {
-        CurrentRoom.Items.Remove(flamethrower);
-        CurrentPlayer.Inventory.Add(flamethrower);
-        System.Console.WriteLine("You take the flamethrower");
-      }
+
     }
 
     public void UseItem(string itemName)
